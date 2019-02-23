@@ -309,7 +309,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomId: testChannel._id,
-					fields,
+					fields: JSON.stringify(fields),
 				})
 				.expect(200)
 				.expect((res) => {
@@ -324,7 +324,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomName: testChannel.name,
-					fields,
+					fields: JSON.stringify(fields),
 				})
 				.expect(200)
 				.expect((res) => {
@@ -339,7 +339,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomId: testGroup._id,
-					fields,
+					fields: JSON.stringify(fields),
 				})
 				.expect(200)
 				.expect((res) => {
@@ -354,7 +354,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomName: testGroup.name,
-					fields,
+					fields: JSON.stringify(fields),
 				})
 				.expect(200)
 				.expect((res) => {
