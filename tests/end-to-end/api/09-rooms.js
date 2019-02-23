@@ -275,7 +275,8 @@ describe('[Rooms]', function() {
 		let testChannel;
 		let testGroup;
 		let testDM;
-		const expectedKeys = ['_id', 'name', 'fname', 't', 'msgs', 'usersCount', 'u', 'customFields', 'ts', 'ro', 'sysMes', 'default', '_updatedAt'];
+		const fields = { _id: 1, name: 1, fname: 1, t: 1, msgs: 1, usersCount: 1, u: 1, customFields: 1, ts: 1, ro: 1, sysMes: 1, default: 1, _updatedAt: 1 };
+		const expectedKeys = Object.keys(fields);
 		const testChannelName = `channel.test.${ Date.now() }-${ Math.random() }`;
 		const testGroupName = `group.test.${ Date.now() }-${ Math.random() }`;
 		after((done) => {
@@ -308,6 +309,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomId: testChannel._id,
+					fields,
 				})
 				.expect(200)
 				.expect((res) => {
@@ -322,6 +324,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomName: testChannel.name,
+					fields,
 				})
 				.expect(200)
 				.expect((res) => {
@@ -336,6 +339,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomId: testGroup._id,
+					fields,
 				})
 				.expect(200)
 				.expect((res) => {
@@ -350,6 +354,7 @@ describe('[Rooms]', function() {
 				.set(credentials)
 				.query({
 					roomName: testGroup.name,
+					fields,
 				})
 				.expect(200)
 				.expect((res) => {
