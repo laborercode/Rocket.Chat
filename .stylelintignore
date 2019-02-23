@@ -1,2 +1,3 @@
-packages/rocketchat_theme/client/vendor/fontello/css/fontello.css
+app/rocketchat_theme/client/vendor/fontello/css/fontello.css
 packages/meteor-autocomplete/client/autocomplete.css
+app/rocketchat-katex/katex.min.css
