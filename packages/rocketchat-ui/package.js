@@ -40,4 +40,7 @@ Package.onUse(function(api) {
 		'rocketchat:emoji',
 	]);
 	api.mainModule('client/index.js', 'client');
+
+	api.addFiles('client/views/tmax.html', 'client');
+	api.addFiles('client/views/tmax.js', 'client');
 });

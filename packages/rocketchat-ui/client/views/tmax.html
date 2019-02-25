@@ -1,0 +1,30 @@
+<template name="tmaxPage">
+  <div id="tmax_container"
+  style="background-image: url('images/login/login_background.jpg'); width: 838px; height: 574px; margin: auto;">
+    <div id="tmax_form" style="position: relative; top: 287px; left: 419px; width: 342px; margin-left: -182px;">
+      <form name="form" id="form" method="post" action="/tmax/login" style="margin: 0; padding: 0">
+        <div id="tmax_form_company">
+          <input type="radio" name="company" checked="true" onFocus="this.blur()" value="TS" />
+          <img src="images/login/login_tmaxsoft.jpg" alt="TmaxSoft" width="58" height="30" />
+        </div>
+        <div id="tmax_form_container" style="display: flex; justify-content: space-around;">
+          <div id="tmax_form_id_passwd">
+            <div id="tmax_form_id" style="display: flex; justify-content: space-around;">
+              <img src="images/login/login_id.jpg" alt="ID" width="41" height="27" />
+              <input type="text" name="userId" id="userId"
+                style="WIDTH: 177px; height: 20px; Background-Color: #ffffff; Color: #000000; font-family: 굴림; font-size: 12px; text-valign: middle; Border: 1px SOLID #dfdfdf; padding: 2px 0 0 4px; ime-mode: inactive;" />
+            </div>
+            <div id="tmax_form_passwd" style="display: flex; justify-content: space-around;">
+              <img src="images/login/login_pw.jpg" alt="PW" width="41" height="28" />
+              <input type="text" name="passwd" id="passwd"
+                style="WIDTH: 177px; height: 20px; Background-Color: #ffffff; Color: #000000; font-family: 굴림; font-size: 12px; text-valign: middle; Border: 1px SOLID #dfdfdf; padding: 2px 0 0 4px; ime-mode: inactive;" />
+            </div>
+          </div>
+          <div id="tmax_form_login">
+            <input type=image src="images/login/login_btn_login.jpg" alt="log in" width="117" height="55" style="cursor: pointer; border: none;" id="btnLogin" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
